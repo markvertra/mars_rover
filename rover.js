@@ -98,6 +98,15 @@ function movement(rover, commands) {
         turnRight(rover);
         break;
         }
+      if (rover.position[0] === -1) {
+        rover.position[0] = 9;
+      } else if (rover.position[1] === -1) {
+        rover.position[1] = 9;
+      } else if (rover.position[0] === 10) {
+        rover.position[0] = 0;
+      } else if (rover.position[1] === 10) {
+        rover.position[1] = 0;
+      }
       console.log("Rover Position: [" + rover.position[0] + ", " + rover.position[1] + "]");
       console.log("River Direction: " + rover.direction);
       }
